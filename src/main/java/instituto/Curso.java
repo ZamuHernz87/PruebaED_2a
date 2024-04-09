@@ -20,7 +20,11 @@ public class Curso {
     //datos del curso
     private String nombre;
     private TreeSet<Persona> listaAlumnos;
-
+    
+    /*
+     * Devuelve el nombre del curso.
+     * @return El nombre del curso.
+     */
     protected String getNombre() {
         return nombre;
     }
@@ -43,7 +47,10 @@ public class Curso {
         return s;
     }
     
-    //Añade un alumno al curso.
+    /*
+     * Añade un alumno al curso.
+     * @param p La persona que se va a añadir como alumno al curso.
+     */
     public void aniadirAlumno(Persona p) {
         listaAlumnos.add(p);
     }

@@ -76,8 +76,9 @@ public class Persona implements Comparable<Persona> {
     }
     
     /*
-    *Devuelve la edad de la persona en años
-    **/
+     * Devuelve la edad de la persona en años.
+     * @return La edad de la persona en años.
+     */
     public int getEdad() {
         return Period.between(nacimiento, LocalDate.now()).getYears();
     }
