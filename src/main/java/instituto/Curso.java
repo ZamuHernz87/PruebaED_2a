@@ -34,7 +34,9 @@ public class Curso {
         }
         return s;
     }
-
+    /*
+    *Documentar y crear test unitario
+    **/
     public void aniadirAlumno(Persona p) {
         listaAlumnos.add(p);
     }

@@ -67,7 +67,10 @@ public class Persona implements Comparable<Persona> {
     public void setNacimiento(LocalDate nacimiento) {
         this.nacimiento = nacimiento;
     }
-
+    
+    /*
+    *Documentar y crear test unitario
+    **/
     public int getEdad() {
         return Period.between(nacimiento, LocalDate.now()).getYears();
     }
@@ -89,6 +92,9 @@ public class Persona implements Comparable<Persona> {
         return a.nif.toString().equals(this.nif.toString());
     }
 
+    /*
+    *Documentar y crear test unitario
+    **/
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -104,7 +110,10 @@ public class Persona implements Comparable<Persona> {
 
         return Objects.equals(this.nif, other.nif);
     }
-
+    
+    /*
+    *Documentar y crear test unitario
+    **/
     @Override
     public int compareTo(Persona o) {
         return this.nif.toString().compareTo(o.nif.toString());
