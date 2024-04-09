@@ -8,6 +8,12 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.util.Objects;
 
+/*
+ * Clase que representa una persona.
+ * Esta clase incluye información sobre el NIF, nombre, género y fecha de nacimiento de una persona.
+ * También proporciona métodos para obtener la edad y realizar comparaciones entre personas.
+ */
+
 public class Persona implements Comparable<Persona> {
 
     private Nif nif;
@@ -15,6 +21,7 @@ public class Persona implements Comparable<Persona> {
     private char genero;
     private LocalDate nacimiento;
 
+    //constructores y métodos de acceso
     public Persona() {
         nif = new Nif();
         nombre = "";
@@ -69,7 +76,7 @@ public class Persona implements Comparable<Persona> {
     }
     
     /*
-    *Documentar y crear test unitario
+    *Devuelve la edad de la persona en años
     **/
     public int getEdad() {
         return Period.between(nacimiento, LocalDate.now()).getYears();
@@ -93,7 +100,7 @@ public class Persona implements Comparable<Persona> {
     }
 
     /*
-    *Documentar y crear test unitario
+    *Metodo equals qu ecompara los nifs de dos personas
     **/
     @Override
     public boolean equals(Object obj) {
@@ -112,7 +119,7 @@ public class Persona implements Comparable<Persona> {
     }
     
     /*
-    *Documentar y crear test unitario
+    *uso del compare to para persona
     **/
     @Override
     public int compareTo(Persona o) {

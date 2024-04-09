@@ -9,21 +9,29 @@ import java.util.TreeSet;
 /**
  *
  * @author ProfDiurno
+ * 
+ * Clase que representa un curso.
+ * Esta clase contiene un nombre y una lista de 
+ * alumnos inscritos en el curso.
  */
+ 
 public class Curso {
 
+    //datos del curso
     private String nombre;
     private TreeSet<Persona> listaAlumnos;
 
     protected String getNombre() {
         return nombre;
     }
-
+    
+    //constructor de la clase
     public Curso(String nombre) {
         this.nombre = nombre;
         listaAlumnos = new TreeSet<>();
     }
-
+    
+    // Implementación del método toString
     @Override
     public String toString() {
         String s = "--------------------" + nombre + "-----------------\n";
@@ -34,9 +42,8 @@ public class Curso {
         }
         return s;
     }
-    /*
-    *Documentar y crear test unitario
-    **/
+    
+    //Añade un alumno al curso.
     public void aniadirAlumno(Persona p) {
         listaAlumnos.add(p);
     }
